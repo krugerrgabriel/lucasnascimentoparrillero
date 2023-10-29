@@ -1,0 +1,586 @@
+:root {
+    --font-family: 'Outfit', sans-serif;
+
+    --background: #1B1B1B;
+    --white: #FFFFFF;
+    --primary: #FF9D00;
+    --secondary: #0C0C0C;
+}
+
+* {
+  scrollbar-width: none;
+  scrollbar-color: var(--primary) var(--background);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+  width: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: var(--primary);
+  border-radius: 0px;
+  border: 0px solid var(--background);
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 134px;
+}
+
+body {
+    font-family: var(--font-family);
+
+    background-color: var(--background);
+
+    min-height: 100vh;
+
+    padding: 110px 0 0 0;
+    margin: 0;
+    
+    overflow-x: hidden;
+}
+
+* {
+    outline: 0;
+    border: 0;
+}
+
+header {
+    background-color: var(--secondary);
+
+    height: 110px;
+
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+
+    z-index: 500;
+}
+
+header div.container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+
+    height: 100%;
+}
+
+header img.logo {
+    height: 74px;
+    width: auto;
+}
+
+a.button {
+    background-color: var(--primary);
+
+    padding: 8px 16px;
+
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 700;
+
+    text-decoration: unset;
+
+    transform: scale(0.99);
+
+    border-radius: 8px;
+
+    transition: 0.2s;
+}
+a.button:hover {
+    text-decoration: unset;
+
+    transform: scale(1);
+}
+a.button:active {
+    transform: scale(0.98);
+}
+
+h1, h2 {
+  color: var(--primary);
+
+  font-size: 28px;
+  font-weight: 700;
+
+  text-align: center;
+
+  margin-bottom: 32px;
+}
+
+img.floating {
+  position: absolute;
+}
+
+section:not(.banner) {
+  margin: 64px 0;
+}
+
+section.banner {
+  position: relative;
+
+  height: 880px;
+}
+
+section.banner img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+
+  height: 880px;
+  width: auto;
+
+  object-fit: contain;
+  object-position: center;
+
+  z-index: -1;
+}
+
+section.banner div.col-10 {
+  position: relative;
+}
+
+section.banner div.text {
+  display: flex;
+  flex-direction: column;
+
+  position: absolute;
+  top: 225px;
+}
+
+section.banner div.text p{
+  color: var(--white);
+
+  font-size: 20px;
+  font-weight: 300;
+
+  line-height: 30px;
+
+  max-width: 600px;
+
+  margin: 0;
+}
+
+section.my-journey {
+  margin-top: -200px;
+  padding-bottom: 32px;
+
+  position: relative;
+}
+
+section.my-journey div.container {
+  display: flex;
+  flex-direction: row;
+}
+
+section.my-journey div.container img {
+  width: 400px;
+  height: auto;
+
+  border-radius: 12px;
+
+  z-index: 10;
+}
+
+section.my-journey div.info-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  margin-left: 42px;
+}
+
+section.my-journey div.info-box h2 {
+  text-align: start;
+
+  margin: 0;
+}
+
+section.my-journey div.info-box div.text p {
+  color: var(--white);
+
+  font-size: 17px;
+  font-weight: 300;
+
+  line-height: 30px;
+
+  margin: 12px 0 0 0;
+}
+
+section.my-journey div.info-box div.stats {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 48px;
+}
+
+section.my-journey div.info-box div.stats div.stat {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 8px;
+
+  z-index: 10;
+}
+
+section.my-journey div.info-box div.stats div.stat h4{
+  color: var(--primary);
+
+  font-size: 64px;
+  font-weight: 700;
+
+  margin: 0;
+}
+
+section.my-journey div.info-box div.stats div.stat h4 span{
+  font-size: 16px;
+  font-weight: 300;
+}
+
+section.my-journey div.info-box div.stats div.stat p{
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 400;
+
+  margin: 0;
+}
+
+section.my-journey div.layer {
+  background-color: var(--secondary);
+
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  height: 150px;
+
+  z-index: 5;
+}
+
+section.my-journey img.floating {
+  right: 0;
+  bottom: -200px;
+
+  width: 300px;
+  height: auto;
+
+  z-index: 10;
+}
+
+section.our-services article.card {
+  background-color: var(--secondary);
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 16px;
+
+  padding: 32px;
+
+  height: 100%;
+
+  border-radius: 14px;
+
+  box-shadow: 0 0 8px 4px rgba(255, 157, 0, 0.2);
+}
+
+section.our-services article.card div.header {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+section.our-services article.card div.header img {
+  height: 32px;
+  width: auto;
+}
+
+section.our-services article.card div.header h4 {
+  color: var(--white);
+
+  font-size: 18px;
+  font-weight: 600;
+
+  margin: 0;
+}
+
+section.our-services article.card h6 {
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 300;
+
+  line-height: 30px;
+
+  text-align: justify;
+
+  margin: 0;
+}
+
+section.gallery div.carousel {
+  display: flex;
+  gap: 18px;
+
+  overflow-x: scroll;
+
+  width: 100%;
+}
+
+section.gallery div.carousel::-webkit-scrollbar {
+  height: 0px;
+}
+section.gallery div.carousel::-webkit-scrollbar-button {
+  width: 0px;
+  height: 0px;
+  transition: all 0.2s ease 0s;
+}
+
+section.gallery div.carousel article.image {
+  display: flex;
+  align-items: flex-end;
+  flex-direction: column;
+  gap: 6px;
+}
+
+section.gallery div.carousel article.image img {
+  height: 350px;
+  width: auto;
+}
+
+section.gallery div.carousel article.image legend {
+  color: var(--white);
+  
+  font-size: 11px;
+  font-weight: 500;
+
+  margin: 0;
+
+  width: max-content;
+
+  float: right;
+}
+
+section.gallery div.controls {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+
+  width: max-content;
+
+  margin: 8px 0 0 auto;
+}
+
+section.gallery div.controls > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: var(--primary);
+
+  height: 28px;
+  width: 28px;
+
+  cursor: pointer;
+
+  border-radius: 6px;
+}
+
+section.gallery div.controls > div img {
+  height: 12px;
+  width: auto;
+}
+
+section.testimonials article.testimonial {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  background-color: #3C3C3C;
+
+  border-radius: 20px;
+
+  padding: 0 24px 24px 24px;
+
+  margin-top: 65px;
+}
+
+section.testimonials article.testimonial img{
+  width: 130px;
+  height: 130px;
+
+  object-fit: contain;
+  object-position: center;
+
+  border-radius: 50%;
+
+  margin-top: -65px;
+}
+
+section.testimonials article.testimonial h6 {
+  color: var(--primary);
+
+  font-size: 18px;
+  font-weight: 600;
+
+  margin: 12px 0 4px 0;
+}
+
+section.testimonials article.testimonial p.text{
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 300;
+
+  line-height: 30px;
+
+  text-align: center;
+
+  margin: 0 0 12px 0;
+}
+
+section.testimonials article.testimonial p.date {
+  color: var(--white);
+
+  font-size: 12px;
+  font-weight: 300;
+
+  margin: 0;
+}
+
+section.contact {
+  position: relative;
+}
+
+section.contact div.contact-wrapper {
+  display: flex;
+  flex-direction: column;
+}
+
+section.contact h3 {
+  color: var(--white);
+
+  font-size: 28px;
+  font-weight: 600;
+
+  text-align: center;
+
+  margin: 0;
+}
+
+section.contact p{
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 300;
+
+  line-height: 30px;
+
+  text-align: center;
+
+  margin: 6px 0 16px 0;
+}
+
+section.contact a {
+  text-transform: uppercase;
+
+  margin: 0 auto;
+}
+
+section.contact img.floating {
+  height: 500px;
+
+  top: -200px;
+}
+
+footer {
+  background-color: var(--secondary);
+
+  padding: 42px 0;
+}
+
+footer > div.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+footer img.logo {
+  height: 175px;
+  width: auto;
+}
+
+footer div.links {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer div.links p.title {
+  color: var(--primary);
+
+  font-size: 16px;
+  font-weight: 600;
+
+  margin: 0 0 2px 0;
+}
+
+footer div.links a {
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 400;
+
+  text-decoration: none;
+
+  margin: 0;
+}
+
+footer div.contact {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+footer div.contact p.title {
+  color: var(--primary);
+
+  font-size: 16px;
+  font-weight: 600;
+
+  margin: 0 0 2px 0;
+}
+
+footer div.contact a {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+
+  text-decoration: none;
+}
+
+footer div.contact a img {
+  width: 16px;
+  height: auto;
+}
+
+footer div.contact a p {
+  color: var(--white);
+
+  font-size: 16px;
+  font-weight: 400;
+
+  margin: 0;
+}
