@@ -12,6 +12,9 @@
 
         <link rel="stylesheet" href="assets/dist/css/bootstrap.min.css">
         <link rel="stylesheet" href="assets/css/main.css">
+        <link rel="stylesheet" href="assets/dist/css/aos.min.css">
+
+        <link rel="shortcut icon" href="assets/img/logo-lucas-nascimento-parrillero.svg" type="image/svg">
 
         <script src="assets/dist/js/bootstrap.bundle.min.js"></script>
     </head>
@@ -31,7 +34,7 @@
                 <img src="assets/img/carne-deliciosa-parrilla.jpg" alt="Deliciosa carne de parrilla">
 
                 <div class="container justify-content-center">
-                    <div class="col-10">
+                    <div class="col-xxl-10 col-xl-10 col-lg-10 col-12">
                         <div class="text">
                             <h1>Transforme seu churrasco em um evento épico!</h1>
                             <p>Conheça o parrilheiro Lucas Nascimento e saboreie um espetáculo de sabor e suculência com carnes de alta qualidade, técnicas artesanais e paixão inigualável.</p>
@@ -42,6 +45,23 @@
 
             <section class="my-journey" id="minha-jornada">
                 <div class="container">
+                    <div class="stats">
+                        <div class="stat">
+                            <h4>+40</h4>
+                            <p>Eventos</p>
+                        </div>
+
+                        <div class="stat">
+                            <h4>+700<span>kg</span></h4>
+                            <p>Carne assada</p>
+                        </div>
+
+                        <div class="stat">
+                            <h4>+2<span>anos</span></h4>
+                            <p>Experiência</p>
+                        </div>
+                    </div>
+
                     <img src="assets/img/lucas-nascimento-parrillero.jpg" alt="Imagem do Lucas Nascimento Parrillero em um evento de parrilla">
 
                     <div class="info-box">
@@ -52,17 +72,17 @@
 
                         <div class="stats">
                             <div class="stat">
-                                <h4>+40</h4>
+                                <h4>+<i class="one" data-number="40">0</i></h4>
                                 <p>Eventos</p>
                             </div>
 
                             <div class="stat">
-                                <h4>+700<span>kg</span></h4>
+                                <h4>+<i class="two" data-number="700">0</i><span>kg</span></h4>
                                 <p>Carne assada</p>
                             </div>
 
                             <div class="stat">
-                                <h4>+2<span>anos</span></h4>
+                                <h4>+<i class="three" data-number="2">0</i><span>anos</span></h4>
                                 <p>Experiência</p>
                             </div>
                         </div>
@@ -78,12 +98,12 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Nossos Serviços 🔪</h2>
+                            <h2 data-aos="fade-up">Nossos Serviços 🔪</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <article class="card">
+                    <div class="row services-wrapper">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12">
+                            <article class="card" data-aos="fade-up">
                                 <div class="header">
                                     <img src="assets/img/bx-badge-check.svg" alt="Ícone de aulas magistrais para especialização em churrasco parrilla">
                                     <h4>Aulas magistrais de churrasco</h4>
@@ -92,8 +112,8 @@
                             </article>
                         </div>
 
-                        <div class="col-4">
-                            <article class="card">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12">
+                            <article class="card" data-aos="fade-up">
                                 <div class="header">
                                     <img src="assets/img/bx-calendar-star.svg" alt="Ícone para churrascos para todas as ocasiões e eventos">
                                     <h4>Churrascos para todas as ocasiões</h4>
@@ -102,8 +122,8 @@
                             </article>
                         </div>
 
-                        <div class="col-4">
-                            <article class="card">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-12">
+                            <article class="card" data-aos="fade-up">
                                 <div class="header">
                                     <img src="assets/img/bx-line-chart.svg" alt="Ícone para consultoria personalizada sobre carnes para parrilla">
                                     <h4>Consultoria personalizada</h4>
@@ -116,7 +136,7 @@
             </section>
 
             <section class="gallery">
-                <div class="carousel">
+                <div class="carousel" id="carousel" data-aos="fade-up">
                     <article class="image">
                         <img src="assets/img/gallery/cordeiro-suculento-feito-no-fogo-de-chao.jpg" alt="Imagem de cordeiro suculento feito no fogo de chão">
                         <legend>Evento XXX - 2022</legend>
@@ -165,10 +185,10 @@
 
                 <div class="container">
                     <div class="controls">
-                        <div data-direction="left">
+                        <div id="scroll-left">
                             <img src="assets/img/bxs-left-arrow.svg" alt="Ícone de seta para a esquerda">
                         </div>
-                        <div data-direction="right">
+                        <div id="scroll-right">
                             <img src="assets/img/bxs-right-arrow.svg" alt="Ícone de seta para a direita">
                         </div>
                     </div>
@@ -179,36 +199,30 @@
                 <div class="container">
                     <div class="row">
                         <div class="col-12">
-                            <h2>Comentários 🤩</h2>
+                            <h2 data-aos="fade-up">Comentários 🤩</h2>
                         </div>
                     </div>
-                    <div class="row">
-                        <div class="col-4">
-                            <article class="testimonial">
-                                <img src="assets/img/testemunhal-ana-paula-pinno.jpg" alt="Imagem da cliente Ana Paula Pinno" class="customer">
-                                <h6>Ana Paula Pinno</h6>
-                                <p class="text">O Lucas não é apenas churrasqueiro, seu conhecimento sobre carnes, técnicas e temperos é impressionante. Sua paixão pelo que faz brilha tão intensamente quanto o fogo sob as grelhas.</p>
-                                <p class="date">05 | Agosto | 2022</p>
-                            </article>
-                        </div>
+                    <div class="testimonial-wrapper">
+                        <article class="testimonial" data-aos="fade-up">
+                            <img src="assets/img/testemunhal-ana-paula-pinno.jpg" alt="Imagem da cliente Ana Paula Pinno" class="customer">
+                            <h6>Ana Paula Pinno</h6>
+                            <p class="text">O Lucas não é apenas churrasqueiro, seu conhecimento sobre carnes, técnicas e temperos é impressionante. Sua paixão pelo que faz brilha tão intensamente quanto o fogo sob as grelhas.</p>
+                            <p class="date">05 | Agosto | 2022</p>
+                        </article>
 
-                        <div class="col-4">
-                            <article class="testimonial">
-                                <img src="assets/img/testemunhal-ana-julia-bracarense.jpg" alt="Imagem da cliente Ana Júlia Bracarense" class="customer">
-                                <h6>Ana Júlia Bracarense</h6>
-                                <p class="text">Eu nunca soube o que era um verdadeiro churrasco até conhecer Lucas! Cada mordida foi uma explosão de sabor. Desde então, não posso mais imaginar um fim de semana sem o seu churrasco.</p>
-                                <p class="date">12 | Setembro | 2023</p>
-                            </article>
-                        </div>
+                        <article class="testimonial" data-aos="fade-up">
+                            <img src="assets/img/testemunhal-ana-julia-bracarense.jpg" alt="Imagem da cliente Ana Júlia Bracarense" class="customer">
+                            <h6>Ana Júlia Bracarense</h6>
+                            <p class="text">Eu nunca soube o que era um verdadeiro churrasco até conhecer Lucas! Cada mordida foi uma explosão de sabor. Desde então, não posso mais imaginar um fim de semana sem o seu churrasco.</p>
+                            <p class="date">12 | Setembro | 2023</p>
+                        </article>
 
-                        <div class="col-4">
-                            <article class="testimonial">
-                                <img src="assets/img/testemuhal-gabriel-sabara-kruger.jpg" alt="Imagem do cliente Gabriel Sabara Krüger" class="customer">
-                                <h6>Gabriel Sabara Krüger</h6>
-                                <p class="text">O que torna o Lucas excepcional é a forma como ele une as pessoas em torno da churrasqueira. Seus churrascos são mais do que refeições: É amizade e prazer de compartilhar comida deliciosa.</p>
-                                <p class="date">23 | Janeiro | 2023</p>
-                            </article>
-                        </div>
+                        <article class="testimonial" data-aos="fade-up">
+                            <img src="assets/img/testemuhal-gabriel-sabara-kruger.jpg" alt="Imagem do cliente Gabriel Sabara Krüger" class="customer">
+                            <h6>Gabriel Sabara Krüger</h6>
+                            <p class="text">O que torna o Lucas excepcional é a forma como ele une as pessoas em torno da churrasqueira. Seus churrascos são mais do que refeições: É amizade e prazer de compartilhar comida deliciosa.</p>
+                            <p class="date">23 | Janeiro | 2023</p>
+                        </article>
                     </div>
                 </div>
             </section>
@@ -216,7 +230,7 @@
             <section class="contact">
                 <div class="container">
                     <div class="row justify-content-center">
-                        <div class="col-10 contact-wrapper">
+                        <div class="col-10 contact-wrapper" data-aos="fade-up">
                             <h3>Acenda a sua paixão pelo churrasco! 🔥😋</h3>
                             <p>Entre em contato agora e agende o seu evento, sua aula de churrasco ou sua consulta personalizada. Esteja pronto para um sabor que o fará você e aos seus convidados ansiarem por mais.</p>
                             <a href="https://wa.me/5545998235990?text=Olá! Vi sobre o seu trabalho em seu site e gostaria de tirar algumas dúvidas 🤩" target="_blank" class="button">Entrar em contato</a>
@@ -225,6 +239,39 @@
                 </div>
 
                 <img src="assets/img/bife-de-porco-assado-na-superficie-escura.png" alt="Imagem de bife de porco assado na superficie escura" class="floating">
+            </section>
+
+            <section class="partners">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 data-aos="fade-up">Parceiros 😁</h2>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-12" data-aos="fade-up">
+                            <a href="#!" target="_blank">
+                                <div class="partner">
+                                    <img src="https://loja.medixbrasil.com.br/cdn/shop/files/Medix_Brasil_-_Em_branco_200x.png?v=1614817091" alt="Logo da Medix">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-12" data-aos="fade-up">
+                            <a href="#!" target="_blank">
+                                <div class="partner">
+                                    <img src="https://loja.medixbrasil.com.br/cdn/shop/files/Medix_Brasil_-_Em_branco_200x.png?v=1614817091" alt="Logo da Medix">
+                                </div>
+                            </a>
+                        </div>
+                        <div class="col-xxl-4 col-xl-4 col-lg-4 col-md-4 col-12" data-aos="fade-up">
+                            <a href="#!" target="_blank">
+                                <div class="partner last">
+                                    <img src="https://loja.medixbrasil.com.br/cdn/shop/files/Medix_Brasil_-_Em_branco_200x.png?v=1614817091" alt="Logo da Medix">
+                                </div>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </section>
         </main>
 
@@ -253,5 +300,8 @@
                 </div>
             </div>
         </footer>
+
+        <script src="assets/dist/js/aos.min.js"></script>
+        <script src="assets/js/main.js"></script>
     </body>
 </html>

@@ -1,10 +1,10 @@
 :root {
-    --font-family: 'Outfit', sans-serif;
+  --font-family: "Outfit", sans-serif;
 
-    --background: #1B1B1B;
-    --white: #FFFFFF;
-    --primary: #FF9D00;
-    --secondary: #0C0C0C;
+  --background: #1b1b1b;
+  --white: #ffffff;
+  --primary: #ff9d00;
+  --secondary: #0c0c0c;
 }
 
 * {
@@ -28,82 +28,109 @@
 }
 
 html {
-    scroll-behavior: smooth;
-    scroll-padding-top: 134px;
+  scroll-behavior: smooth;
+  scroll-padding-top: 134px;
+
+  width: 100vw;
 }
 
 body {
-    font-family: var(--font-family);
+  font-family: var(--font-family);
 
-    background-color: var(--background);
+  background-color: var(--background);
 
-    min-height: 100vh;
+  min-height: 100vh;
+  width: 100vw;
 
-    padding: 110px 0 0 0;
-    margin: 0;
-    
-    overflow-x: hidden;
+  padding: 110px 0 0 0;
+  margin: 0;
+
+  overflow-x: hidden;
 }
 
 * {
-    outline: 0;
-    border: 0;
+  outline: 0;
+  border: 0;
 }
 
 header {
-    background-color: var(--secondary);
+  background-color: var(--secondary);
 
-    height: 110px;
+  height: 110px;
+  max-width: 100vw;
 
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
 
-    z-index: 500;
+  z-index: 500;
 }
 
 header div.container {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    flex-direction: row;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
 
-    height: 100%;
+  height: 100%;
 }
 
 header img.logo {
-    height: 74px;
-    width: auto;
+  height: 74px;
+  width: auto;
 }
 
 a.button {
-    background-color: var(--primary);
+  background-color: var(--primary);
 
-    padding: 8px 16px;
+  padding: 8px 16px;
 
-    color: var(--white);
-    font-size: 13px;
-    font-weight: 700;
+  color: var(--white);
+  font-size: 13px;
+  font-weight: 700;
 
-    text-decoration: unset;
+  text-decoration: unset;
 
-    transform: scale(0.99);
+  transform: scale(0.99);
 
-    border-radius: 8px;
+  border-radius: 8px;
 
-    transition: 0.2s;
+  transition: 0.2s;
 }
 a.button:hover {
-    text-decoration: unset;
+  text-decoration: unset;
 
-    transform: scale(1);
+  transform: scale(1);
 }
 a.button:active {
-    transform: scale(0.98);
+  transform: scale(0.98);
 }
 
-h1, h2 {
+@media (max-width: 601px) {
+  body {
+    padding: 80px 0 0 0;
+  }
+
+  header {
+    height: 80px;
+  }
+
+  header img.logo {
+    height: 60px;
+  }
+
+  html {
+    scroll-padding-top: 104px;
+  }
+
+  a.button {
+    font-size: 10px;
+  }
+}
+
+h1,
+h2 {
   color: var(--primary);
 
   font-size: 28px;
@@ -112,6 +139,22 @@ h1, h2 {
   text-align: center;
 
   margin-bottom: 32px;
+}
+
+@media (max-width: 1201px) {
+  h1,
+  h2 {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 769px) {
+  h1,
+  h2 {
+    font-size: 20px;
+
+    margin-bottom: 18px;
+  }
 }
 
 img.floating {
@@ -135,9 +178,9 @@ section.banner img {
   left: 0;
 
   height: 880px;
-  width: auto;
+  width: 100%;
 
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 
   z-index: -1;
@@ -155,7 +198,7 @@ section.banner div.text {
   top: 225px;
 }
 
-section.banner div.text p{
+section.banner div.text p {
   color: var(--white);
 
   font-size: 20px;
@@ -166,6 +209,67 @@ section.banner div.text p{
   max-width: 600px;
 
   margin: 0;
+}
+
+@media (max-width: 993px) {
+  section.banner,
+  section.banner img {
+    height: 500px;
+  }
+
+  section.banner > div.container {
+    position: relative;
+  }
+
+  section.banner div.text {
+    top: 150px;
+  }
+
+  section.banner div.text p {
+    max-width: unset;
+
+    text-align: center;
+  }
+
+  section.banner h1 {
+    margin-bottom: 14px;
+  }
+}
+
+@media (max-width: 769px) {
+  section.banner h1 {
+    font-size: 20px;
+
+    line-height: 21px;
+  }
+
+  section.banner div.text {
+    top: 64px;
+  }
+
+  section.banner div.text p {
+    font-size: 14px;
+
+    line-height: 21px;
+  }
+
+  section.banner,
+  section.banner img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 601px) {
+  section.banner div.text {
+    top: 42px;
+
+    left: 0;
+    right: 0;
+
+    max-width: 90%;
+
+    margin: 0 auto;
+  }
 }
 
 section.my-journey {
@@ -183,6 +287,9 @@ section.my-journey div.container {
 section.my-journey div.container img {
   width: 400px;
   height: auto;
+
+  object-fit: cover;
+  object-position: center;
 
   border-radius: 12px;
 
@@ -214,14 +321,20 @@ section.my-journey div.info-box div.text p {
   margin: 12px 0 0 0;
 }
 
-section.my-journey div.info-box div.stats {
-  display: flex;
+section.my-journey div.stats {
   align-items: center;
   flex-direction: row;
   gap: 48px;
 }
 
-section.my-journey div.info-box div.stats div.stat {
+section.my-journey div.stats {
+  display: none;
+}
+section.my-journey div.info-box div.stats {
+  display: flex;
+}
+
+section.my-journey div.stats div.stat {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -230,7 +343,17 @@ section.my-journey div.info-box div.stats div.stat {
   z-index: 10;
 }
 
-section.my-journey div.info-box div.stats div.stat h4{
+section.my-journey div.stats div.stat:has(i.one) {
+  min-width: 118px;
+}
+section.my-journey div.stats div.stat:has(i.two) {
+  min-width: 171px;
+}
+section.my-journey div.stats div.stat:has(i.three) {
+  min-width: 106px;
+}
+
+section.my-journey div.stats div.stat h4 {
   color: var(--primary);
 
   font-size: 64px;
@@ -239,12 +362,16 @@ section.my-journey div.info-box div.stats div.stat h4{
   margin: 0;
 }
 
-section.my-journey div.info-box div.stats div.stat h4 span{
+section.my-journey div.stats div.stat h4 i {
+  font-style: unset;
+}
+
+section.my-journey div.stats div.stat h4 span {
   font-size: 16px;
   font-weight: 300;
 }
 
-section.my-journey div.info-box div.stats div.stat p{
+section.my-journey div.stats div.stat p {
   color: var(--white);
 
   font-size: 16px;
@@ -276,21 +403,169 @@ section.my-journey img.floating {
   z-index: 10;
 }
 
+@media (max-width: 1201px) {
+  section.my-journey div.info-box {
+    margin-left: 24px;
+  }
+
+  section.my-journey div.info-box div.text p {
+    font-size: 15px;
+
+    line-height: 27px;
+  }
+
+  section.my-journey div.container img {
+    height: 300px;
+  }
+
+  section.my-journey div.info-box div.stats div.stat h4 {
+    font-size: 52px;
+  }
+
+  section.my-journey div.info-box div.stats {
+    margin-top: 38px;
+  }
+
+  section.my-journey img.floating {
+    width: 250px;
+
+    bottom: -125px;
+  }
+}
+
+@media (max-width: 993px) {
+  section.my-journey {
+    margin-top: -124px;
+
+    padding-bottom: 0;
+  }
+
+  section.my-journey div.container {
+    flex-direction: column;
+  }
+
+  section.my-journey div.layer {
+    bottom: unset;
+    top: 152px;
+
+    height: 298px;
+  }
+
+  section.my-journey div.container img {
+    height: 250px;
+    width: 100%;
+
+    object-fit: cover;
+    object-position: top;
+
+    margin-top: 24px;
+  }
+
+  section.my-journey div.info-box {
+    margin: 42px 0 0 0;
+  }
+
+  section.my-journey div.stats {
+    display: flex;
+    justify-content: space-between;
+
+    height: 110px;
+
+    margin-bottom: 42px;
+  }
+
+  section.my-journey div.info-box div.stats {
+    display: none;
+  }
+
+  section.my-journey img.floating {
+    bottom: unset;
+    top: 152px;
+  }
+}
+
+@media (max-width: 769px) {
+  section.my-journey div.stats {
+    height: 61px;
+
+    margin-bottom: 24px;
+  }
+
+  section.my-journey {
+    margin-top: -42px;
+  }
+
+  section.my-journey div.stats div.stat {
+    gap: 2px;
+  }
+
+  section.my-journey div.stats div.stat h4 {
+    font-size: 34px;
+  }
+
+  section.my-journey div.stats div.stat p {
+    font-size: 12px;
+  }
+
+  section.my-journey div.layer {
+    top: 84px;
+
+    height: 252px;
+  }
+
+  section.my-journey img.floating {
+    top: 112px;
+
+    width: 200px;
+  }
+
+  section.my-journey div.info-box h2 {
+    text-align: center;
+  }
+
+  section.my-journey div.info-box div.text p {
+    font-size: 13px;
+
+    line-height: 22px;
+
+    text-align: center;
+  }
+
+  section.my-journey div.container img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 551px) {
+  section.my-journey img.floating {
+    width: 150px;
+  }
+}
+
+@media (min-width: 550px) {
+  section.our-services article.card {
+    padding: 32px;
+
+    box-shadow: 0 0 8px 4px rgba(255, 157, 0, 0.2);
+  }
+}
+
+@media (max-width: 365px) {
+  section.my-journey div.stats {
+    gap: 24px;
+  }
+}
+
 section.our-services article.card {
   background-color: var(--secondary);
 
   display: flex;
-  align-items: center;
   flex-direction: column;
   gap: 16px;
-
-  padding: 32px;
 
   height: 100%;
 
   border-radius: 14px;
-
-  box-shadow: 0 0 8px 4px rgba(255, 157, 0, 0.2);
 }
 
 section.our-services article.card div.header {
@@ -327,6 +602,46 @@ section.our-services article.card h6 {
   margin: 0;
 }
 
+@media (max-width: 993px) {
+  section.our-services div.services-wrapper {
+    display: flex;
+    gap: 18px;
+  }
+}
+
+@media (max-width: 550px) {
+  section.our-services > div.container {
+    background-color: var(--secondary);
+
+    padding-top: 24px;
+    padding-bottom: 24px;
+  }
+
+  section.our-services article.card {
+    gap: 8px;
+  }
+
+  section.our-services article.card div.header {
+    justify-content: center;
+  }
+
+  section.our-services article.card div.header h4 {
+    font-size: 14px;
+  }
+
+  section.our-services article.card div.header img {
+    height: 28px;
+  }
+
+  section.our-services article.card h6 {
+    font-size: 13px;
+
+    line-height: 21px;
+
+    text-align: center;
+  }
+}
+
 section.gallery div.carousel {
   display: flex;
   gap: 18px;
@@ -359,7 +674,7 @@ section.gallery div.carousel article.image img {
 
 section.gallery div.carousel article.image legend {
   color: var(--white);
-  
+
   font-size: 11px;
   font-weight: 500;
 
@@ -393,6 +708,8 @@ section.gallery div.controls > div {
   cursor: pointer;
 
   border-radius: 6px;
+
+  user-select: none;
 }
 
 section.gallery div.controls > div img {
@@ -400,12 +717,31 @@ section.gallery div.controls > div img {
   width: auto;
 }
 
+@media (max-width: 993px) {
+  section.gallery div.carousel article.image img {
+    height: 300px;
+  }
+}
+
+@media (max-width: 600px) {
+  section.gallery div.carousel article.image img {
+    height: 250px;
+  }
+}
+
+section.testimonials div.testimonial-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  gap: 42px;
+}
+
 section.testimonials article.testimonial {
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  background-color: #3C3C3C;
+  background-color: #3c3c3c;
 
   border-radius: 20px;
 
@@ -414,11 +750,11 @@ section.testimonials article.testimonial {
   margin-top: 65px;
 }
 
-section.testimonials article.testimonial img{
+section.testimonials article.testimonial img {
   width: 130px;
   height: 130px;
 
-  object-fit: contain;
+  object-fit: cover;
   object-position: center;
 
   border-radius: 50%;
@@ -435,7 +771,7 @@ section.testimonials article.testimonial h6 {
   margin: 12px 0 4px 0;
 }
 
-section.testimonials article.testimonial p.text{
+section.testimonials article.testimonial p.text {
   color: var(--white);
 
   font-size: 16px;
@@ -457,12 +793,92 @@ section.testimonials article.testimonial p.date {
   margin: 0;
 }
 
+@media (max-width: 993px) {
+  section.testimonials > div.container {
+    max-width: unset;
+    width: 100%;
+
+    padding: 0;
+
+    margin: 0;
+  }
+
+  section.testimonials div.testimonial-wrapper {
+    overflow-x: scroll;
+
+    width: 100%;
+
+    padding: 0 42px;
+  }
+
+  section.testimonials article.testimonial {
+    width: 350px;
+    min-width: 350px;
+  }
+
+  section.testimonials div.testimonial-wrapper::-webkit-scrollbar {
+    height: 0px;
+  }
+  section.testimonials div.testimonial-wrapper::-webkit-scrollbar-button {
+    width: 0px;
+    height: 0px;
+    transition: all 0.2s ease 0s;
+  }
+}
+
+@media (max-width: 768px) {
+  section.testimonials article.testimonial {
+    width: 280px;
+    min-width: 280px;
+
+    position: relative;
+  }
+
+  section.testimonials article.testimonial img {
+    height: 90px;
+    width: 90px;
+
+    margin-top: -45px;
+  }
+
+  section.testimonials article.testimonial h6 {
+    font-size: 14px;
+
+    margin: 8px 0 4px 0;
+  }
+
+  section.testimonials article.testimonial p.text {
+    font-size: 13px;
+
+    line-height: 21px;
+
+    margin-bottom: 20px;
+  }
+
+  section.testimonials article.testimonial p.date {
+    font-size: 11px;
+
+    position: absolute;
+    right: 24px;
+    bottom: 18px;
+  }
+}
+
+@media (max-width: 601px) {
+  section.testimonials div.testimonial-wrapper {
+    gap: 18px;
+
+    padding: 0 24px;
+  }
+}
+
 section.contact {
   position: relative;
 }
 
 section.contact div.contact-wrapper {
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
@@ -477,7 +893,7 @@ section.contact h3 {
   margin: 0;
 }
 
-section.contact p{
+section.contact p {
   color: var(--white);
 
   font-size: 16px;
@@ -486,6 +902,8 @@ section.contact p{
   line-height: 30px;
 
   text-align: center;
+
+  max-width: 500px;
 
   margin: 6px 0 16px 0;
 }
@@ -500,6 +918,95 @@ section.contact img.floating {
   height: 500px;
 
   top: -200px;
+}
+
+@media (max-width: 1401px) {
+  section.contact img.floating {
+    height: 400px;
+
+    top: -150px;
+  }
+}
+
+@media (max-width: 993px) {
+  section.contact img.floating {
+    height: 300px;
+  }
+}
+
+@media (max-width: 769px) {
+  section.contact h3 {
+    color: var(--primary);
+
+    font-size: 20px;
+  }
+
+  section.contact p {
+    font-size: 13px;
+
+    line-height: 21px;
+
+    text-align: center;
+  }
+
+  section.contact a {
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 676px) {
+  section.contact img.floating {
+    height: 200px;
+
+    top: -120px;
+  }
+}
+
+@media (max-width: 551px) {
+  section.contact img.floating {
+    top: -150px;
+  }
+}
+
+section.partners div.partner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background-color: #3c3c3c;
+
+  min-height: 150px;
+
+  border-radius: 20px;
+
+  padding: 20px 24px;
+}
+
+section.partners div.partner img {
+  width: 150px;
+  height: auto;
+}
+
+@media (max-width: 993px) {
+  section.partners div.partner {
+    min-height: 125px;
+  }
+
+  section.partners div.partner img {
+    width: 125px;
+  }
+}
+
+@media (max-width: 768px) {
+  section.partners div.partner {
+    min-height: 150px;
+
+    margin-bottom: 16px;
+  }
+
+  section.partners div.partner.last {
+    margin-bottom: 0;
+  }
 }
 
 footer {
@@ -583,4 +1090,18 @@ footer div.contact a p {
   font-weight: 400;
 
   margin: 0;
+}
+
+@media (max-width: 769px) {
+  footer div.links {
+    display: none;
+  }
+
+  footer img.logo {
+    height: 64px;
+  }
+
+  footer div.contact p {
+    font-size: 12px;
+  }
 }
