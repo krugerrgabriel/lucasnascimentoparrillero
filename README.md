@@ -2,6 +2,8 @@
 
 A showcase website for Lucas Nascimento, a parrillero (barbecue chef) based in Cascavel, Brazil.
 
+🔗 **Live:** https://lucasnascimentoparrillero.com.br/
+
 **Built with:** HTML · CSS · JavaScript
 
 ## About
